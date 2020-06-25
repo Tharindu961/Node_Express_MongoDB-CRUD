@@ -6,5 +6,13 @@ var employeeSchema = new mongoose.Schema({
     },
     email: {
         type: String
+    },
+    mobile: {
+        type: String
+    },
+    city: {
+        type: String
     }
 });
+
+mongoose.model('Employee', employeeSchema);
