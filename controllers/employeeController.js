@@ -5,4 +5,4 @@ router.get('/', (req, res) => {
     res.json('sample test');
 })
 
-module.exports = rouet;
+module.exports = router;
