@@ -33,4 +33,14 @@ router.get('/list', (req, res) => {
     res.json('from list');
 });
 
+
+function handleValidationError(err,body){
+    for(field in err.error)
+    {
+        switch (err.error[field].path) {
+            
+        }
+    }
+}
+
 module.exports = router;
