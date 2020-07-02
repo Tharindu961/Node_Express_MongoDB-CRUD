@@ -23,6 +23,7 @@ function insertRecord(req,res){
         if(!err)
             res.redirected('employee/list');
             else {
+                if(err.name == 'ValidationError')
                 console.log('Error during record insertion : ' + err);
             }
     });
