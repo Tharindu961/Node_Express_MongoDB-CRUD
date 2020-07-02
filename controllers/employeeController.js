@@ -19,6 +19,13 @@ function insertRecord(req,res){
     employee.email = req.body.email;
     employee.mobile = req.body.mobile;
     employee.city = req.body.city;
+    employee.save((err, doc) => {
+        if(!err)
+            res.redirected('employee/list');
+            else {
+                console.log('Error during record insertion : ' + err);
+            }
+    });
 }
 
 module.exports = router;
