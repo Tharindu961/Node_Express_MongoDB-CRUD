@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/',(req, res) => {
-    inserRecord(req.body);
+    inserRecord(req.res);
 });
 
 function insertRecord(req,res){
@@ -27,5 +27,9 @@ function insertRecord(req,res){
             }
     });
 }
+
+router.get('/list', (req, res) => {
+    res.json('from list');
+});
 
 module.exports = router;
