@@ -50,6 +50,8 @@ function handleValidationError(err,body){
             case 'email':
                 body['emailError'] = err.error[field].message;
                 break;
+            default:
+                break;
         }
     }
 }
