@@ -25,6 +25,10 @@ function insertRecord(req,res){
             else {
                 if(err.name == 'ValidationError'){
                     handleValidationError(err, req.body);
+                    res.render("employee/addOrEdit", {
+                        viewTitle: "Insert Employee",
+                        employee: req.body
+                    });
                 }else 
                 console.log('Error during record insertion : ' + err);
                 
