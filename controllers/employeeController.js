@@ -46,7 +46,10 @@ function handleValidationError(err,body){
     {
         switch (err.error[field].path) {
             case 'fullName':
-                body['fullNameError']= err.error[field].mssage;
+                body['fullNameError']= err.error[field].message;
+            case 'email':
+                body['emailError'] = err.error[field].message;
+                break;
         }
     }
 }
