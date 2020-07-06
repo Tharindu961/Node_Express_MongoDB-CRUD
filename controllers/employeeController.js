@@ -65,4 +65,8 @@ function handleValidationError(err,body){
     }
 }
 
+router.get('/:id', (req, res) => {
+    Employee.findById(req.params.id);
+});
+
 module.exports = router;
