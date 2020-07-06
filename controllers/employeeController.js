@@ -10,7 +10,10 @@ router.get('/', (req, res) => {
 });
 
 router.post('/',(req, res) => {
+    if (req.body._id == '')
     inserRecord(req.res);
+    else
+    updateRecord(req, res);
 });
 
 function insertRecord(req,res){
@@ -35,6 +38,7 @@ function insertRecord(req,res){
             }
     });
 }
+
 
 router.get('/list', (req, res) => {
     Employee.find((err, docs) => {
