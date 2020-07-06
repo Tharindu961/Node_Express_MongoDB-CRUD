@@ -39,6 +39,11 @@ function insertRecord(req,res){
     });
 }
 
+function updateRecord(req, res) {
+    Employee.findOneAndUpdate({ _id: req.body._id }, req.body, { new : true }, {err, doc} => {
+
+    });
+}
 
 router.get('/list', (req, res) => {
     Employee.find((err, docs) => {
