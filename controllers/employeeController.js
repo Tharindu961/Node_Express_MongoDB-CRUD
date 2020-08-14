@@ -41,7 +41,7 @@ function insertRecord(req,res){
 
 function updateRecord(req, res) {
     Employee.findOneAndUpdate({ _id: req.body._id }, req.body, { new : true }, {err, doc} => {
-
+        
     });
 }
 
